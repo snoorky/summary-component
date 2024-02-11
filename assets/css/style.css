@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500&display=swap');
+
+:root {
+    --lightRed: hsl(0, 100%, 67%);
+    --orangeYellow: hsl(39, 100%, 56%);
+    --greenTeal: hsl(166, 100%, 37%);
+    --cobaltBlue: hsl(234, 85%, 45%);
+    --lightSlateBlue: hsl(252, 100%, 67%);
+    --lightRoyalBlue: hsl(241, 81%, 54%);
+    --violetBlue: hsla(256, 72%, 46%, 1);
+    --persianBlue: hsla(241, 72%, 46%, 0);
+    --white: hsl(0, 0%, 100%);
+    --paleBlue: hsl(221, 100%, 96%);
+    --lightLavender: hsl(241, 100%, 89%);
+    --darkGrayBlue: hsl(224, 30%, 27%);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Hanken Grotesk', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 1.5px;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+}
+
+h1 {
+    font-size: 72px;
+}
+
+h2 {
+    font-size: 32px;
+    margin-bottom: 24px;
+}
+
+h3 {
+    font-size: 24px;
+}
+
+h4 {
+    font-size: 24px;
+}
+
+h6 {
+    font-size: 16px;
+}
+
+p {
+    font-size: 18px;
+    color: var(--lightLavender);
+}
+
+section.component {
+    border-radius: 30px;
+    display: flex;
+    box-shadow: 0 0 25px -10px var(--darkGrayBlue);
+}
+
+.results {
+    text-align: center;
+    border-radius: 30px;
+    width: 300px;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+    background: linear-gradient(180deg, var(--lightRoyalBlue), var(--lightSlateBlue));
+}
+
+.circle {
+    margin: 32px 0;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: linear-gradient(180deg, var(--violetBlue), var(--persianBlue));
+}
+
+.summary {
+    padding: 50px;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.itemReaction, .itemMemory, .itemVerbal, .itemVisual {
+    padding: 12px 16px;
+    border-radius: 10px;
+    margin-bottom: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.itemReaction {
+    background-color: hsl(0, 100%, 67%, 0.3);
+    color: hsl(0, 100%, 67%);
+}
+
+.itemMemory {
+    background-color: hsl(39, 100%, 56%, 0.3);
+    color: hsl(39, 100%, 56%);
+}
+
+.itemVerbal {
+    background-color: hsl(166, 100%, 37%, 0.3);
+    color: hsl(166, 100%, 37%);
+}
+
+.itemVisual {
+    background-color: hsl(241, 100%, 89%, 0.3);
+    color: hsl(252, 100%, 67%);
+}
+
+.info,
+.score {
+    align-items: center;
+    display: flex;
+}
+
+.score p {
+    color: hsl(224, 30%, 27%);
+}
+
+.score p#current {
+    font-weight: bold;
+    margin-right: 8px;
+}
+
+
+img {
+    width: 30px;
+    margin-right: 8px;
+}
+
+button {
+    padding: 24px 0;
+    border: none;
+    background-color: var(--darkGrayBlue);
+    color: var(--white);
+    border-radius: 50px;
+    font-size: 16px;
+}
+
+button:active {
+    background: linear-gradient(180deg, var(--lightSlateBlue), var(--lightRoyalBlue));
+}
+
+@media screen and (max-width: 480px) {
+    body { width: auto; height: auto; }
+    
+    h1 { font-size: 56px; }
+    
+    h2 { font-size: 24px; margin-bottom: 8px; }
+    
+    h3 { font-size: 18px; }
+    
+    h4 { font-size: 18px; margin-bottom: 16px;}
+    
+    h6 { font-size: 14px; }
+    
+    p { font-size: 14px; }
+    
+    section.component {
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .results {
+        margin-top: -30px;
+        width: 80%;
+        padding: 50px;
+    }
+    
+    .circle {
+        margin: 24px 0;
+        width: 150px;
+        height: 150px;
+    }
+    
+    .summary {
+        padding: 25px;
+    }
+    
+    .itemReaction, .itemMemory, .itemVerbal, .itemVisual {
+        padding: 12px 16px;
+        margin-bottom: 12px;
+    }
+
+    button {
+        margin-top: 8px;
+    }
+}
